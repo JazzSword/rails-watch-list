@@ -1,11 +1,16 @@
-<h1>Save any kind of movies</h1>
-<p>Classic</p>
+<div class="container">
+  <div class="banner" background-image="">
+    <h1>Save any kind of movies</h1>
+    <p>Classic</p>
+  </div>
+</div>
 
-<h2>My List</h2>
-<ul>
-  <% @lists.each do |list| %>
-  <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Add List', new_list_path  %>
+<div class="container">
+  <h2>My List</h2>
+  <ul>
+    <% @lists.each do |list| %>
+    <li><%= link_to list.name, list_path(list) %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'Add List', new_list_path  %>
+</div>
