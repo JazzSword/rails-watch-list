@@ -1,16 +1,17 @@
-<div class="container">
-  <div class="banner" background-image="">
-    <h1>Save any kind of movies</h1>
-    <p>Classic</p>
-  </div>
+<div class="banner">
+  <h1>Save any kind of movies</h1>
+  <p>Classic</p>
 </div>
+
 
 <div class="container">
   <h2>My List</h2>
-  <ul>
-    <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-    <% end %>
-  </ul>
+  <div class="cards">
+    <ul>
+      <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  </div>
   <%= link_to 'Add List', new_list_path  %>
 </div>
